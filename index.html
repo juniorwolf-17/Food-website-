@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Paradise</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="upload.html">Uploads</a></li>
+                <li>
+                    <a id="login-link" href="login.html">Login</a>
+                    <a id="profile-link" href="profile.html" style="display: none;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" 
+                      style="height: 32px; width: 32px; border-radius: 50%; vertical-align: middle; margin-top: -4px;">
+                    </a>
+                  </li>
+
+            </ul>
+        </nav>
+    </header>
+    
+
+    
+    <section class="hero">
+        <img src="IMG-20241021-WA0003[1].jpg"alt="Delicious food spread with various dishes">
+        <div class="hero-text">
+
+                <h2>Discover Delicious Recipes</h2>
+                <p>Cook amazing dishes with our handpicked recipes.</p>
+                
+            </div>
+        </section>
+
+        <!-- <section class="filters">
+            <h2>Find Your Perfect Recipe</h2>
+            
+            <div class="ingredient-filter">
+                <label for="ingredients-dropdown"></label>
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle" onclick="toggleCheckboxes()">Select Ingredients ▼</button>
+                </div>
+                <div id="checkbox-container" class="checkbox-container" style="display: none;">
+                    <div class="checkbox-box">
+                        <div class="ingredient">
+                            <input type="checkbox" id="tomato" name="potato">
+                            <label for="tomato">Tomato</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="potato" name="potato">
+                            <label for="potato">Potato</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="onion" name="onion">
+                            <label for="onion">onion</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="spinach" name="spinach">
+                            <label for="spinach">Spinach</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="capsicum" name="capsicum">
+                            <label for="capsicum">Capsicum</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="lady finger" name="lady finger">
+                            <label for="lady finger">Lady Finger</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="peas" name="peas">
+                            <label for="peas">Peas</label>
+                        </div>
+                        <div class="ingredient">
+                            <input type="checkbox" id="mushroom" name="mushroom">
+                            <label for="mushroom">Mushroom</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script>
+            function toggleCheckboxes() {
+                const checkboxContainer = document.getElementById('checkbox-container');
+                if (checkboxContainer.style.display === 'none' || checkboxContainer.style.display === '') {
+                    checkboxContainer.style.display = 'block'; // Show checkboxes
+                } else {
+                    checkboxContainer.style.display = 'none'; // Hide checkboxes
+                }
+            }
+        </script>
+          <div class="spice-filter">
+            <label for="spices-dropdown"></label>
+            <div class="dropdown">
+                <button type="button" class="dropdown-toggle" onclick="toggleSpiceCheckboxes()">Select Spices ▼</button>
+            </div>
+            <div id="spice-checkbox-container" class="checkbox-container">
+                <div class="checkbox-box">
+                    <div class="spice">
+                        <input type="checkbox" id="cumin" name="cumin">
+                        <label for="cumin">Cumin</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="coriander" name="coriander">
+                        <label for="coriander">Coriander</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="turmeric" name="turmeric">
+                        <label for="turmeric">Turmeric</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="red_chilli" name="red_chilli">
+                        <label for="red_chilli">Red Chilli</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="black_pepper" name="black_pepper">
+                        <label for="black_pepper">Black pepper</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="garam_masala" name="garam_masala">
+                        <label for="garam_masala">Garam masala</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="garlic" name="garlic">
+                        <label for="garlic">Garlic</label>
+                    </div>
+                    <div class="spice">
+                        <input type="checkbox" id="cloves" name="cloves">
+                        <label for="cloves">Cloves</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <script>
+            function toggleSpiceCheckboxes() {
+                const spiceCheckboxContainer = document.getElementById('spice-checkbox-container');
+                if (spiceCheckboxContainer.style.display === 'none' || spiceCheckboxContainer.style.display === '') {
+                    spiceCheckboxContainer.style.display = 'block'; // Show spice checkboxes
+                } else {
+                    spiceCheckboxContainer.style.display = 'none'; // Hide spice checkboxes
+                }
+            }
+        </script>
+        <div class="other-ingredient-filter">
+            <label for="other-ingredients-dropdown"></label>
+            <div class="dropdown">
+                <button type="button" class="dropdown-toggle" onclick="toggleOtherIngredientCheckboxes()">Select Other Ingredients ▼</button>
+            </div>
+            <div id="other-ingredient-checkbox-container" class="checkbox-container">
+                <div class="checkbox-box">
+                    <div class="ingredient">
+                        <input type="checkbox" id="paneer" name="paneer">
+                        <label for="paneer">Paneer</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="chicken" name="chicken">
+                        <label for="chicken">Chicken</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="fish" name="fish">
+                        <label for="fish">Fish</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="soybean" name="soybean">
+                        <label for="soybean">Soybean</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="mutton" name="mutton">
+                        <label for="mutton">Mutton</label>
+                    </div>
+                  
+                    <div class="ingredient">
+                        <input type="checkbox" id="lentils" name="lentils">
+                        <label for="lentils">Lentils</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="tofu" name="tofu">
+                        <label for="tofu">Tofu</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="eggs" name="eggs">
+                        <label for="eggs">Eggs</label>
+                    </div>
+                    <div class="ingredient">
+                        <input type="checkbox" id="rice" name="rice">
+                        <label for="rice">Rice</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+         <script>
+            function toggleOtherIngredientCheckboxes() {
+                const otherIngredientCheckboxContainer = document.getElementById('other-ingredient-checkbox-container');
+                if (otherIngredientCheckboxContainer.style.display === 'none' || otherIngredientCheckboxContainer.style.display === '') {
+                    otherIngredientCheckboxContainer.style.display = 'block'; // Show other ingredient checkboxes
+                } else {
+                    otherIngredientCheckboxContainer.style.display = 'none'; // Hide other ingredient checkboxes
+                }
+            }
+            </script>  
+        <button type="button" id="submit-button" onclick="submitAllSelections()">Submit</button>
+    </div>
+
+<script>
+    const recipeURLs = {
+    chicken: [
+            'https://www.foodnetwork.com/recipes/chicken-tikka-masala-recipe-1944517',
+            'https://www.jamieoliver.com/recipes/chicken-recipes/chicken-biryani/',
+            'https://www.foodnetwork.com/recipes/chicken-tikka-masala-recipe-1944517',
+            'https://www.indianhealthyrecipes.com/chicken-biryani-recipe/'
+           
+           
+            
+        ],
+    fish: [
+            'https://www.indianhealthyrecipes.com/seafood-curry/',
+            'https://www.foodandwine.com/recipes/easy-seafood-chowder',
+            'https://www.indianhealthyrecipes.com/fish-curry-recipe/'
+        ],
+    cumin: 'https://www.archanaskitchen.com/raita-recipe',
+    coriander: 'https://www.indianhealthyrecipes.com/chana-masala-recipe/',
+    red_chilli: [
+        'https://www.allrecipes.com/recipe/219185/red-chili-sauce/',
+        'https://www.foodnetwork.com/recipes/food-network-kitchen/stuffed-peppers-recipe-228319',
+        'https://www.bbcgoodfood.com/recipes/chilli-chicken',
+        'https://www.simplyrecipes.com/recipes/chili_con_carne/',
+        'https://www.spiceupthecurry.com/szechuan-chicken/',
+        'https://www.cookingclassy.com/red-chile-salsa/',
+        'https://www.seriouseats.com/homemade-chili-oil-recipe',
+        'https://www.vegrecipesofindia.com/chili-garlic-noodles-recipe/'
+    ],
+    turmeric: 'https://www.cookwithmanali.com/dal-tadka-recipe/',
+    black_pepper: 'https://www.cookingclassy.com/stuffed-paratha/',
+    garam_masala : 'https://www.spiceupthecurry.com/kadhi-pakora-recipe/',
+    paneer: 'https://www.indianhealthyrecipes.com/paneer-butter-masala/',
+    soybean: 'https://www.indianhealthyrecipes.com/soybean-salad-recipe/',
+    mutton: 'https://www.indianhealthyrecipes.com/mutton-biryani-recipe/',
+    beef: 'https://www.indianhealthyrecipes.com/beef-stir-fry/',
+    lentils: 'https://www.veganricha.com/lentil-soup-recipe/',
+    tofu: 'https://minimalistbaker.com/simple-tofu-stir-fry/',
+    eggs: 'https://www.indianhealthyrecipes.com/egg-curry/',
+    rice: [
+        'https://www.indianhealthyrecipes.com/chicken-biryani-recipe/',
+        'https://www.vegrecipesofindia.com/pulao-recipe/'
+    ],
+    tomato: [
+        'https://www.simplyrecipes.com/recipes/tomato_pasta/',
+        'https://www.foodnetwork.com/recipes/food-network-kitchen/tomato-salad-recipe-2011447'
+    ],
+    potato: [
+        'https://www.allrecipes.com/recipe/24636/mashed-potatoes/',
+        'https://www.jamieoliver.com/recipes/potato-recipes/baked-potato-wedges/'
+    ],
+    onion: [
+        'https://www.foodnetwork.com/recipes/food-network-kitchen/french-onion-soup-recipe-1940461',
+        'https://www.simplyrecipes.com/recipes/caramelized_onions/'
+    ],
+    spinach: [
+        'https://www.seriouseats.com/creamy-spinach-recipe',
+        'https://www.cookinglight.com/recipes/spinach-salad'
+    ],
+    capsicum: [
+        'https://www.allrecipes.com/recipe/228319/stuffed-peppers/',
+        'https://www.foodnetwork.com/recipes/food-network-kitchen/grilled-bell-peppers-recipe-1944418'
+    ],
+    lady_finger: [
+        'https://www.indianhealthyrecipes.com/bhindi-masala/',
+        'https://www.allrecipes.com/recipe/21347/fried-okra/'
+    ],
+    peas: [
+        'https://www.simplyrecipes.com/recipes/pea_soup/',
+        'https://www.bbcgoodfood.com/recipes/mushy-peas'
+    ],
+    mushroom: [
+        'https://www.bbcgoodfood.com/recipes/mushroom-risotto',
+        'https://www.foodnetwork.com/recipes/food-network-kitchen/stuffed-mushrooms-recipe-1941361'
+    ]
+    
+    };
+
+
+function toggleIngredientCheckboxes() {
+        const ingredientCheckboxContainer = document.getElementById('ingredient-checkbox-container');
+        ingredientCheckboxContainer.style.display = ingredientCheckboxContainer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleSpiceCheckboxes() {
+        const spiceCheckboxContainer = document.getElementById('spice-checkbox-container');
+        spiceCheckboxContainer.style.display = spiceCheckboxContainer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleOtherIngredientCheckboxes() {
+        const otherIngredientCheckboxContainer = document.getElementById('other-ingredient-checkbox-container');
+        otherIngredientCheckboxContainer.style.display = otherIngredientCheckboxContainer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function submitAllSelections() {
+        const selectedIngredients = [];
+
+        // Collect selected ingredients
+        const ingredientCheckboxes = document.querySelectorAll('#ingredient-checkbox-container input[type="checkbox"]:checked');
+        ingredientCheckboxes.forEach((checkbox) => {
+            selectedIngredients.push(checkbox.name);
+        });
+
+        // Collect selected spices
+        const spiceCheckboxes = document.querySelectorAll('#spice-checkbox-container input[type="checkbox"]:checked');
+        spiceCheckboxes.forEach((checkbox) => {
+            selectedIngredients.push(checkbox.name);
+        });
+
+        // Collect selected other ingredients
+        const otherIngredientCheckboxes = document.querySelectorAll('#other-ingredient-checkbox-container input[type="checkbox"]:checked');
+        otherIngredientCheckboxes.forEach((checkbox) => {
+            selectedIngredients.push(checkbox.name);
+        });
+
+        // Redirect to the first matching recipe URL
+        for (const ingredient of selectedIngredients) {
+            if (recipeURLs[ingredient]) {
+                window.location.href = recipeURLs[ingredient];
+                return; // Stop after the first match
+            }
+        }
+
+        alert("No recipe found for the selected ingredients."); // Optional: alert if no match found
+    } -->
+    
+</script>
+        </script>
+        <section class="personalize">
+            <h2>Personalize Your Experience</h2>
+            <p>What are your favorite cuisines?</p>
+            <div class="cuisine-options">
+                <div class="cuisine-card"onclick="location.href='italian-dishes.html'">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_124508.jpg" alt="Italian cuisine dishes">
+                    <button>Italian</button>
+                </div>
+                <div class="cuisine-card"onclick="location.href='continental-dishes.html'">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155724.jpg" alt="Continental cuisine dishes">
+                    <button>Continental</button>
+                </div>
+                <div class="cuisine-card"onclick="location.href='american-dishes.html'">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155545.jpg" alt="American cuisine dishes">
+                    <button>American</button>
+                </div>
+                <div class="cuisine-card"onclick="location.href='indian-dishes.html'">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_124457.jpg" alt="Indian cuisine dishes">
+                    <button>Indian</button>
+                </div>
+                <div class="cuisine-card"onclick="location.href='chinese-dishes.html'">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155639.jpg" alt="Chinese cuisine dishes">
+                    <button>Chinese</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles">
+            <h2>Featured Articles</h2>
+            <div class="article-cards">
+                <div class="article-card">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155622.jpg" alt="Two-Ingredient Recipe">
+                    <div class="article-content">
+                        <h3>2-Ingredient Recipes</h3>
+                        <p>Discover simple yet delicious recipes with only two ingredients.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155602.jpg" alt="5-Minute Recipe">
+                    <div class="article-content">
+                        <h3>5-Minute Recipes</h3>
+                        <p>Quick and easy recipes you can make in just 5 minutes.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+               
+                <div class="article-card">
+                    <img src="https://assets.onecompiler.app/42qvcw296/3x2zp2yd7/IMG_20240901_155724.jpg" alt="15 Best Summer Foods">
+                    <div class="article-content">
+                        <h3>15 Best Summer Foods</h3>
+                        <p>Refreshing dishes to beat the summer heat.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://media.istockphoto.com/id/1156011999/photo/raw-tuna-steak-and-seafood-on-wooden-tray.jpg?s=612x612&w=0&k=20&c=-XOaMtaup7z-mKaovhRWcj-UfBz4nLIumH9mmsFfcK4=" alt="Top 10 Recommended Seafood">
+                    <div class="article-content">
+                        <h3>Top 10 Recommended Seafood</h3>
+                        <p>A guide to the best seafood dishes to try this season.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://media.istockphoto.com/id/476953636/photo/fresh-fruit-salad.jpg?s=612x612&w=0&k=20&c=_rYyjnypBudzbKPt2xGtDZD7wYmaW8QUTdTG1aXX0ng=" alt="Healthy Snack Ideas">
+                    <div class="article-content">
+                        <h3>Healthy Snack Ideas</h3>
+                        <p>Quick and nutritious snacks to keep you energized.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <img src="family friendly.avif" alt="Family-Friendly Dinner Recipes">
+                    <div class="article-content">
+                        <h3>Family-Friendly Dinner Recipes</h3>
+                        <p>Delicious meals everyone in the family will love.</p>
+                        <a href="recipes.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

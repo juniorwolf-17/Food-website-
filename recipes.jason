@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Pasta Primavera",
+        "ingredients": ["pasta", "tomato", "garlic", "olive oil", "parmesan"],
+        "instructions": "Cook pasta and mix with sautéed vegetables.",
+        "category": "Italian"
+    },
+    {
+        "title": "Vegetable Stir Fry",
+        "ingredients": ["broccoli", "carrot", "soy sauce", "ginger", "garlic"],
+        "instructions": "Stir-fry vegetables with soy sauce and serve hot.",
+        "category": "Asian"
+    },
+    {
+        "title": "Chicken Curry",
+        "ingredients": ["chicken", "onion", "tomato", "garlic", "ginger", "spices"],
+        "instructions": "Cook chicken with spices, onion, and tomato for a flavorful curry.",
+        "category": "Indian"
+    },
+    {
+        "title": "Mango Smoothie",
+        "ingredients": ["mango", "milk", "sugar", "ice cubes"],
+        "instructions": "Blend mango, milk, sugar, and ice cubes until smooth.",
+        "category": "Beverages"
+    },
+    {
+        "title": "Caesar Salad",
+        "ingredients": ["lettuce", "croutons", "parmesan", "chicken", "caesar dressing"],
+        "instructions": "Mix all ingredients with Caesar dressing and serve chilled.",
+        "category": "Salad"
+    },
+    {
+        "title": "Tacos",
+        "ingredients": ["tortilla", "ground beef", "tomato", "lettuce", "cheese"],
+        "instructions": "Fill tortilla with seasoned beef, lettuce, tomato, and cheese.",
+        "category": "Mexican"
+    },
+    {
+        "title": "Margherita Pizza",
+        "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "basil"],
+        "instructions": "Bake pizza dough with tomato sauce, mozzarella, and basil.",
+        "category": "Italian"
+    },
+    {
+        "title": "Chocolate Cake",
+        "ingredients": ["flour", "sugar", "cocoa powder", "eggs", "butter"],
+        "instructions": "Mix ingredients and bake at 180°C for 30 minutes.",
+        "category": "Dessert"
+    },
+    {
+        "title": "Sushi Rolls",
+        "ingredients": ["sushi rice", "nori", "salmon", "avocado", "soy sauce"],
+        "instructions": "Roll sushi rice and salmon in nori, slice, and serve with soy sauce.",
+        "category": "Japanese"
+    },
+    {
+        "title": "Falafel Wrap",
+        "ingredients": ["falafel", "pita bread", "hummus", "cucumber", "lettuce"],
+        "instructions": "Wrap falafel and vegetables in pita bread with hummus.",
+        "category": "Middle Eastern"
+    },
+    {
+        "title": "Pancakes",
+        "ingredients": ["flour", "milk", "sugar", "baking powder", "eggs"],
+        "instructions": "Mix ingredients and cook pancakes on a hot griddle.",
+        "category": "Breakfast"
+    },
+    {
+        "title": "Tomato Soup",
+        "ingredients": ["tomato", "onion", "garlic", "butter", "cream"],
+        "instructions": "Blend cooked tomatoes with onion and garlic, simmer with butter and cream.",
+        "category": "Soup"
+    },
+    {
+        "title": "Biryani",
+        "ingredients": ["basmati rice", "chicken", "spices", "yogurt", "onion"],
+        "instructions": "Layer spiced chicken and rice, cook until fragrant.",
+        "category": "Indian"
+    },
+    {
+        "title": "Lasagna",
+        "ingredients": ["lasagna sheets", "minced beef", "tomato sauce", "cheese"],
+        "instructions": "Layer cooked meat sauce, lasagna sheets, and cheese, then bake.",
+        "category": "Italian"
+    },
+    {
+        "title": "Greek Salad",
+        "ingredients": ["cucumber", "tomato", "feta cheese", "olives", "olive oil"],
+        "instructions": "Toss all ingredients with olive oil and serve fresh.",
+        "category": "Salad"
+    }
+]

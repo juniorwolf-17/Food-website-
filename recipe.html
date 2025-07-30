@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Paradise - Search Recipes</title>
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+
+<body>
+    <header>
+        
+        
+        <div class="logo">
+            <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="upload.html">Uploads</a></li>
+                <li>
+                    <a id="login-link" href="login.html">Login</a>
+                    <a id="profile-link" href="profile.html" style="display: none;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" 
+                      style="height: 32px; width: 32px; border-radius: 50%; vertical-align: middle; margin-top: -4px;">
+                    </a>
+                  </li>
+                
+                
+                <!-- <a href="/logout">Logout</a> -->
+
+
+            </ul>
+        </nav>
+    </header>
+    <div id="recipe-details" class="recipe-details">
+        <h2 id="recipe-title">Loading...</h2>
+        <p><strong>Category:</strong> <span id="recipe-category"></span></p>
+        <p><strong>Time:</strong> <span id="recipe-time"></span></p>
+        <p><strong>Rating:</strong> <span id="recipe-rating"></span></p>
+        <img id="recipe-img" src="" alt="Recipe Image" />
+        <h3>Ingredients:</h3>
+        <ul id="recipe-ingredients"></ul>
+        <h3>Instructions:</h3>
+        <div id="recipe-instructions"></div>
+    </div>
+    
+    <button class="back-button" onclick="goBack()">← Back to Search</button>
+
+
+    <script src="recipe.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

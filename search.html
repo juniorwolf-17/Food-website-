@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Paradise - Search Recipes</title>
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+<body>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Foodie's Paradise - Search Recipes</title>
+      <link rel="stylesheet" href="styles1.css" />
+    </head>
+    <body>
+    
+      <!-- ✅ Header with ID on Login -->
+      <header>
+        <div class="logo">
+          <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="meal-plans.html">Meal Plans</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="upload.html">Uploads</a></li>
+            <li>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="profile-link" href="profile.html" style="display: none;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" 
+                  style="height: 32px; width: 32px; border-radius: 50%; vertical-align: middle; margin-top: -4px;">
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+    
+      <!-- ✅ Search Section -->
+      <div class="search-container">
+        <br><br><br><br>
+    
+        <h2>Find Your Perfect Recipe</h2>
+        <input type="text" id="ingredient" placeholder="Enter ingredient (e.g., tomato)">
+        <div id="checkbox-container">
+          <div id="ingredient-checkboxes">
+            <label><input type="checkbox" name="ingredient" value="tomato"> Tomato</label>
+            <br>
+            <label><input type="checkbox" name="ingredient" value="onion"> Onion</label>
+            <br>
+            <label><input type="checkbox" name="ingredient" value="cheese"> Cheese</label>
+            <br>
+            <label><input type="checkbox" name="ingredient" value="spinach"> Spinach</label>
+            <br>
+          </div>
+        </div>
+    
+        <select id="category">
+          <option value="">Select Category</option>
+          <option value="Italian">Italian</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Indian">Indian</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Beverages">Beverages</option>
+        </select>
+        <button onclick="fetchRecipes()">Search</button>
+      </div>
+    
+      <!-- ✅ Recipes will be displayed here -->
+      <div class="recipes-container" id="recipes-container"></div>
+    
+      <!-- ✅ Your existing JS file -->
+      <script src="script.js"></script>
+    
+      <!-- ✅ Login/Profile swap script -->
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const user = JSON.parse(localStorage.getItem("user"));
+          const loginLink = document.getElementById("login-link");
+    
+          if (user && loginLink) {
+            loginLink.href = "profile.html";
+            loginLink.textContent = "Profile";
+          }
+        });
+      </script>
+      <script src="script.js"></script>
+    
+    </body>
+    </html>
+    

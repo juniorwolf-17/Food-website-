@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Foodie's Paradise</title>
+    <link rel="stylesheet" href="styles1.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='recipes.html'>Recipes</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href='meal-plans.html'>Meal Plans</a></li>
+            <li><a href='about.html'>About Us</a></li>
+            <li><a href="upload.html">Uploads</a></li>
+            <li>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="profile-link" href="profile.html" style="display: none;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" 
+                  style="height: 32px; width: 32px; border-radius: 50%; vertical-align: middle; margin-top: -4px;">
+                </a>
+              </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form onsubmit="validateSignUp(event)">
+            <div class="input-group">
+                <input type="text" id="signup-username" placeholder="Username" minlength="3" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="signup-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signup-password" placeholder="Password" minlength="6" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password" minlength="6" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p id="signup-message"></p>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+
+    <script>
+        async function validateSignUp(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("signup-username").value;
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+            const confirmPassword = document.getElementById("signup-confirm-password").value;
+            const message = document.getElementById("signup-message");
+
+            if (password !== confirmPassword) {
+                message.innerText = "Passwords do not match!";
+                message.style.color = "red";
+                return;
+            }
+
+            const userData = { username, email, password };
+
+            try {
+                let response = await fetch("http://localhost:5500/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(userData),
+                });
+
+                let data = await response.json();
+
+                if (response.ok) {
+                    alert(data.message);
+                    window.location.href = "index.html"; // Redirect to Login Page
+                } else {
+                    message.innerText = data.message;
+                    message.style.color = "red";
+                }
+            } catch (error) {
+                console.error("Signup Error:", error);
+                message.innerText = "Signup failed, please try again.";
+                message.style.color = "red";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

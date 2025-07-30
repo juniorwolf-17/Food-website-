@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Foodie's Paradise</title>
+    <link rel="stylesheet" href="styles1.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='recipes.html'>Recipes</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href='meal-plans.html'>Meal Plans</a></li>
+            <li><a href='about.html'>About Us</a></li>
+            <li><a href="upload.html">Uploads</a></li>
+            <li><a href='login.html'>Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form onsubmit="validateLogin(event)">
+            <div class="input-group">
+                <input type="email" id="login-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </form>
+    </div>
+
+
+    <script>
+        async function validateLogin(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+            const message = document.getElementById("login-message");
+
+            const loginData = { email, password };
+
+            try {
+                let response = await fetch("http://localhost:5500/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(loginData),
+                });
+
+                let data = await response.json();
+
+                if (response.ok) {
+                    alert(data.message);
+                    window.location.href = "index.html"; // Redirect to Home Page
+                } else {
+                    message.innerText = data.message;
+                    message.style.color = "red";
+                }
+            } catch (error) {
+                console.error("Login Error:", error);
+                message.innerText = "Login failed, please try again.";
+                message.style.color = "red";
+            }
+        }
+    </script>
+    </main>
+
+</body>
+</html>

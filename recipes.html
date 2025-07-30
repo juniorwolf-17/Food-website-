@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Foodie's Paradise</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Hover effect for recipe cards */
+        .recipe-card {
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd; /* Optional border */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .recipe-card:hover {
+            background-color: rgba(0, 0, 0, 0.1); /* Darken the background color */
+            transform: scale(1.02); /* Slightly increase the size */
+        }
+
+        /* Additional styles for image and text alignment */
+        .recipe-card img {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        .recipe-card h3 {
+            text-align: center; /* Center the heading */
+        }
+
+        .recipe-card p {
+            text-align: center; /* Center the paragraph */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Foodie's Paradise</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+            <li><a href='recipes.html'>Recipes</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href='meal-plans.html'>Meal Plans</a></li>
+            <li><a href='about.html'>About Us</a></li>
+            <li><a href="upload.html">Uploads</a></li>
+            <li>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="profile-link" href="profile.html" style="display: none;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" 
+                  style="height: 32px; width: 32px; border-radius: 50%; vertical-align: middle; margin-top: -4px;">
+                </a>
+              </li>
+              
+
+            
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <div id="navbar-container"></div> -->
+
+    
+
+    <main>
+        <section class="recipes"> 
+            <h2 style="text-align: center;">Delicious Recipes</h2>
+            <br><br><br>
+            <div class="recipe-list">
+                <article class="recipe-card"onclick="location.href='pasta-primavera.html'">
+                    <h3>Pasta Primavera</h3>
+                    <img src="https://media.istockphoto.com/id/944831208/photo/whole-wheat-pasta-primavera.jpg?s=612x612&w=0&k=20&c=hKhD-2Wys6RjgkPyw8K7kE1DDQPsCjxkZD7v-YfBClA=" alt="Pasta Primavera">
+                    <p>A delightful mix of fresh vegetables and pasta tossed in a light sauce.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='chicken-tikka-masala.html'">
+                    <h3>Chicken Tikka Masala</h3>
+                    <img src="https://media.istockphoto.com/id/1289789761/photo/image-of-blue-plate-filled-with-butter-chicken-tikka-curry-large-chunks-of-chicken-breast.jpg?s=612x612&w=0&k=20&c=XIyZjlTwQ2XsexLNeBrrhI5rBQTCZ7tCNalbrS0nhYA=" alt="Chicken Tikka Masala">
+                    <p>Grilled chicken pieces in a spicy and creamy tomato sauce.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='choco-lava-cake.html'">
+                    <h3>Choco Lava Cake</h3>
+                    <img src="https://media.istockphoto.com/id/841580754/photo/chocolate-soufle.jpg?s=612x612&w=0&k=20&c=uVY7mH2b_PlDCKyO_rwWr-B4rjDES7o3TkX7KfLDK6M=" alt="Chocolate Lava Cake">
+                    <p>A rich chocolate cake with a gooey molten center.</p>
+                </article>
+                <!-- Indian Recipes -->
+                <article class="recipe-card"onclick="location.href='palak-paneer.html'">
+                    <h3>Palak Paneer</h3>
+                    <img src="https://media.istockphoto.com/id/1273065408/photo/close-up-image-of-handled-yellow-serving-dish-vegetarian-meal-palak-paneer-recipe-beside-blue.jpg?s=612x612&w=0&k=20&c=-J6PjV2hRaqarnTUlUIzcr5UaPR84w9mgAHs_0A1OxI=" alt="Palak Paneer">
+                    <p>Spinach cooked with cottage cheese, flavored with spices.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='pulao.html'">
+                    <h3>Pulao</h3>
+                    <img src="https://media.istockphoto.com/id/2008143481/photo/veg-biryani-or-veg-pulav-fried-rice-indian-food-vegetable-biryani.jpg?s=612x612&w=0&k=20&c=Hj6m4cb1wooajXFHrZzSiUZz6hVuEDooyQxkFYPI2GU=" alt="Pulao">
+                    <p>Rice cooked with assorted vegetables and spices.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='chana-masala.html'">
+                    <h3>Chana Masala</h3>
+                    <img src="chana masala.jpg" alt="Chana Masala" height="10%">
+                    <p>Chickpeas cooked in a spicy tomato-based sauce.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='chicken-briyani.html'">
+                    <h3>Chicken Biryani</h3>
+                    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Chicken Biryani">
+                    <p>Aromatic basmati rice cooked with marinated chicken and spices.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='dal-tadka.html'">
+                    <h3>Dal Tadka</h3>
+                    <img src="https://media.istockphoto.com/id/1205482227/photo/indian-traditional-dal-fry-and-jeera-rice-also-known-as-dal-chawal-cooked-lentils-served-with.jpg?s=612x612&w=0&k=20&c=KvLnJyAnfUdyBtA4I7HEMLvqG78PwyF-UZcVghD8uBU=" alt="Dal Tadka">
+                    <p>Yellow lentils tempered with spices and garnished with coriander.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='raita.html'">
+                    <h3>Raita</h3>
+                    <img src="https://media.istockphoto.com/id/1056787708/photo/sauce-of-yogurt-with-herbs-spices-and-cucumber-close-up-on-the-table-raita-horizontal-top-view.jpg?s=612x612&w=0&k=20&c=nv2U35U_YRiPNhjIAKfNfQB-gBjvrzdj73ABoPb2IgE=" alt="Raita">
+                    <p>A cooling yogurt dish mixed with vegetables or fruits.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='stuffed-paratha.html'">
+                    <h3>Stuffed Paratha</h3>
+                    <img src="https://media.istockphoto.com/id/1418692758/photo/north-indian-famous-food-aloo-paratha-with-mango-pickle-and-butter.jpg?s=612x612&w=0&k=20&c=JDbBS-5EcSOKUeossLW2NufdKE0Mg7zFZV5ZBLdbpUE=" alt="Stuffed Paratha">
+                    <p>Flatbread stuffed with spiced potatoes or paneer.</p>
+                </article>
+                <article class="recipe-card"onclick="location.href='kadhi-pakora.html'">
+                    <h3>Kadhi Pakora</h3>
+                    <img src="https://media.istockphoto.com/id/524997465/photo/kadhi-pakora.jpg?s=612x612&w=0&k=20&c=o_n_AON-TrX4jeyWubQ5O0hATQvkIaKCvhMxWqpWrfM=" alt="Kadhi Pakora">
+                    <p>A yogurt-based curry with gram flour dumplings.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const user = JSON.parse(localStorage.getItem("user"));
+          const loginLink = document.getElementById("login-link");
+      
+          if (user && loginLink) {
+            loginLink.href = "profile.html";
+            loginLink.textContent = "Profile";
+          }
+        });
+      </script> -->
+
+      <!-- <script>
+        fetch("navbar.html")
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+      
+              // Run navbar logic after navbar loads
+              const user = JSON.parse(localStorage.getItem("user"));
+              const loginLink = document.getElementById("login-link");
+      
+              if (user && loginLink) {
+                  loginLink.href = "profile.html";
+                  loginLink.textContent = "Profile";
+              }
+          });
+      </script> -->
+
+      <script src="script.js"></script>
+
+
+</body>
+</html>
+    
